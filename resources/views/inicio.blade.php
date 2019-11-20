@@ -207,7 +207,12 @@
         <div class="modal fade bd-example-modal-lg" id="modalDocumento1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
            <div class="modal-dialog modal-lg" id="mdialTamanio" >
               <div class="modal-content">
-                <embed src="{{$documentos['url1']}}">
+                                  <iframe id="inlineFrameExample"
+                    title="Inline Frame Example"
+                    width="750"
+                    height="590"
+                    src="{{$documentos['url1']}}">
+                  </iframe>
               </div>
           </div>
         </div>
@@ -215,7 +220,12 @@
            <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="container">
-                <embed src="{{$documentos['url2']}}">
+                  <iframe id="inlineFrameExample"
+                    title="Inline Frame Example"
+                    width="750"
+                    height="590"
+                    src="{{$documentos['url2']}}">
+                  </iframe>
                 </div>
               </div>
           </div>
@@ -223,14 +233,24 @@
         <div class="modal fade bd-example-modal-lg" id="modalDocumento3" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
            <div class="modal-dialog modal-lg">
               <div class="modal-content">
-                <embed src="{{$documentos['url3']}}">
+                                  <iframe id="inlineFrameExample"
+                    title="Inline Frame Example"
+                    width="750"
+                    height="590"
+                    src="{{$documentos['url3']}}">
+                  </iframe>
               </div>
           </div>
         </div>
         <div class="modal fade bd-example-modal-lg" id="modalDocumento4" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
            <div class="modal-dialog modal-lg">
               <div class="modal-content">
-                <embed src="{{$documentos['url4']}}">
+                                  <iframe id="inlineFrameExample"
+                    title="Inline Frame Example"
+                    width="750"
+                    height="590"
+                    src="{{$documentos['url4']}}">
+                  </iframe>
               </div>
           </div>
         </div>

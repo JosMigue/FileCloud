@@ -154,6 +154,9 @@ class FirebaseController extends Controller
         $database = $firebase->getDatabase();
         $db=$database->getReference('Users/'.$user['firstName']);
         $comprobar = $db->getvalue();
+        if($comprobar == null || $comprobar == ''){
+            return false;
+        }else{
         if($comprobar['Nombre']==$user['firstName'].' '.$user['lastName'].' '.$user['secondLastName']){
             $bandera = false;
             
@@ -168,12 +171,13 @@ class FirebaseController extends Controller
             $bandera =  true;
             $contar +=1;
         }
-
+    
         if($contar = 2){
             return true;
         }else{
             return false;
         }
+    }
 
     }
     public function verifyUserReq($user){
@@ -358,14 +362,6 @@ class FirebaseController extends Controller
         ->create();
         $database = $firebase->getDatabase();
         $database->getReference($dataReference)->remove();
-
-/*         $serviceAccount = ServiceAccount::fromJsonFile(__DIR__.'/DatabaseFirebase.json');
-        $firebase = (new Factory)
-        ->withServiceAccount($serviceAccount)
-        ->create();
-        $database = $firebase->getDatabase();
-        $database->storage.ref('nuevosUsuarios/'.$data['usuarioNew'].'.pdf')->remove(); */
-
         return redirect ('/usersapprove');
     }
  
